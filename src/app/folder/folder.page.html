@@ -15,7 +15,7 @@
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
     <ion-list>
-      <ion-card *ngFor="let event of eventsList">
+      <ion-card *ngFor="let event of eventsList" (click)="onCardClick(event)">
         <ion-card-header>
           <ion-card-title>{{ event.titulo }}</ion-card-title>
           <ion-card-subtitle>{{ event.subtitulo }}</ion-card-subtitle>

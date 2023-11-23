@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ event.titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header> Informações do Evento </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Subtítulo:</ion-label>
+        <ion-text>{{ event.subtitulo }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Data:</ion-label>
+        <ion-text>{{ event.data }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Descrição:</ion-label>
+        <ion-text>{{ event.descricao }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button> Participar </ion-button>
+</ion-content>
