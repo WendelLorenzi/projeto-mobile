@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -13,27 +13,30 @@ export class EventRegisterPage implements OnInit {
     subtitulo: string;
     data: string;
     descricao: string;
+    local: string;
+    endereco: string;
+    inicio: string;
+    valor: string;
   } = {
     titulo: '',
     subtitulo: '',
     data: '',
     descricao: '',
+    local: '',
+    endereco: '',
+    inicio: '',
+    valor: ''
   };
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe((params: { event?: any }) => {
-      if (params && params.event) {
-        try {
-          const eventData = JSON.parse(params.event);
-          this.event = eventData;
-        } catch (error) {
-          console.error('Erro ao fazer o parse do JSON:', error);
-        }
-      }
-    });
-  }
+    const navigation = this.router.getCurrentNavigation();
+    const state = navigation!.extras.state as {event: any};
+    if (state) {
+      this.event = state.event;
+    }
+   }
 
   goBack() {
     this.router.navigate(['/folder/Eventos']);

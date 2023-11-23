@@ -13,7 +13,7 @@ export class FolderPage implements OnInit {
   constructor(private router: Router) {}
 
   onCardClick(event: any) {
-    this.router.navigate(['/folder/Eventos/event-register', { event: JSON.stringify(event) }]);
+    this.router.navigate(['/folder/Eventos/event-register'], { state: { event: event } });
    }
 
   ngOnInit() {
@@ -23,26 +23,43 @@ export class FolderPage implements OnInit {
         titulo: 'Evento 1',
         subtitulo: 'Subtítulo 1',
         data: '11/11/2023',
-        descricao: 'Descrição do evento 1'
+        descricao: 'Descrição do evento 1',
+        local: 'Batcaverna',
+        endereco: 'Rua Piaui, 815',
+        inicio: '19:00',
+        valor: 'Grátis'
       },
       {
         titulo: 'Evento 2',
         subtitulo: 'Subtítulo 2',
         data: '12/11/2023',
-        descricao: 'Descrição do evento 2'
+        descricao: 'Descrição do evento 2',
+        local: 'Toca do Cateto',
+        endereco: 'Rua Piaui, 1015',
+        inicio: '19:00',
+        valor: 'Grátis'
       },
       {
         titulo: 'Evento 3',
         subtitulo: 'Subtítulo 3',
         data: '12/11/2023',
-        descricao: 'Descrição do evento 3'
+        descricao: 'Descrição do evento 3',
+        local: 'Toca do Cateto',
+        endereco: 'Rua Piaui, 1015',
+        inicio: '19:00',
+        valor: 'Grátis'
       },
       {
         titulo: 'Evento 4',
         subtitulo: 'Subtítulo 4',
         data: '12/11/2023',
-        descricao: 'Descrição do evento 4'
+        descricao: 'Descrição do evento 4',
+        local: 'Batcaverna',
+        endereco: 'Rua Piaui, 815',
+        inicio: '19:00',
+        valor: 'Grátis'
       }
     ];
+    // this.router.navigate(['/folder/Eventos/event-register'], { state: { event: event } });
   }
 }
