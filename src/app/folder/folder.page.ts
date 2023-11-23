@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-folder',
@@ -10,7 +10,11 @@ export class FolderPage implements OnInit {
   public folder!: string;
   public eventsList!: any[];
   private activatedRoute = inject(ActivatedRoute);
-  constructor() {}
+  constructor(private router: Router) {}
+
+  onCardClick(event: any) {
+    this.router.navigate(['/folder/Eventos/event-register', { event: JSON.stringify(event) }]);
+   }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
