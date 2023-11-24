@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-read-qrcode',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReadQrcodePage implements OnInit {
 
-  constructor() { }
+  public userQrCode: any;
+
+  constructor(private barcodeScanner: BarcodeScanner, private router: Router) { }
+
+  scanQRCode() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+    });
+  }
+
+  goBack() {
+    this.router.navigate(['/folder/Eventos']);
+  }
+
 
   ngOnInit() {
+    this.userQrCode = {
+      user: {
+        id: '',
+        name: ''
+      },
+      qrcode: '',
+    }
   }
 
 }
