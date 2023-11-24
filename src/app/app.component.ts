@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Eventos', url: '/folder/Eventos' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
+    { title: 'Cadastrar Eventos', url: '/folder/Eventos/event-form' },
+    { title: 'Meus Eventos', url: '/folder/Eventos/my-events' },
+    { title: 'Ler QrCode', url: '/folder/read-qrcode' },
+    { title: 'Sair', url: '/folder/exit' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

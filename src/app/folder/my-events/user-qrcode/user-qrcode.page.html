@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>user-qrcode</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-back-button (click)="goBack()"></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">user-qrcode</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <img [src]="qrcode" />
+
+</ion-content>
