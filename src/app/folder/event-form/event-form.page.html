@@ -1,3 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
@@ -6,7 +16,6 @@
   </ion-toolbar>
 </ion-header>
 
- <ion-content>
   <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
    <ion-card>
      <ion-card-header> Cadastrar Evento </ion-card-header>
