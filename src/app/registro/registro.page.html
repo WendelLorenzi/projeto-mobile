@@ -4,7 +4,6 @@
     <ion-list>
       <ion-item>
         <ion-input
-          [(ngModel)]="email"
           type="email"
           fill="solid"
           label="Email"
@@ -18,7 +17,6 @@
 
       <ion-item>
         <ion-input
-          [(ngModel)]="password"
           type="password"
           fill="solid"
           label="Senha"
@@ -26,14 +24,41 @@
           helperText="Insira sua senha"
           errorText="Senha inválida!"
           ngModel
-          password
+          email
         ></ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-button (click)="Login()">Entrar</ion-button>
+        <ion-input
+          type="password"
+          fill="solid"
+          label="Confirmar Senha"
+          labelPlacement="floating"
+          helperText="Confirme sua senha"
+          errorText="Senhas diferentes!"
+          ngModel
+          email
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Nome"
+          labelPlacement="floating"
+          helperText="Insira seu nome completo"
+          errorText=""
+          ngModel
+          email
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button>Criar Conta</ion-button>
       </ion-item>
       <ion-item>
-        <ion-button (click)="IrParaRegistrar()">Criar Conta</ion-button>
+        <ion-button (click)="IrparaLogin()">Fazer login</ion-button>
       </ion-item>
     </ion-list>
   </div>

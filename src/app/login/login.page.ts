@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  public email!: string;
+  public password!: string;
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  IrParaRegistrar() {
+    this.router.navigate(['registro']);
   }
 
+  Login() {
+    console.log(this.email);
+    console.log(this.password);
+    if (this.email == 'teste@gmail.com' && this.password == 'projeto-final')
+      this.router.navigate(['folder/Eventos']);
+  }
 }

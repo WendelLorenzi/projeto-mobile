@@ -1,22 +1,31 @@
 ion-card {
   margin: 20px;
-  margin-top: 150px;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
 ion-card-header {
   text-align: center;
   font-weight: bold;
+  font-size: x-large;
+}
+
+ion-input {
+  border-bottom: 1px solid #ccc;
 }
 
 ion-item {
-  --ion-item-padding: 10px;
-  border-bottom: 1px solid #ccc;
-
   ion-label {
     font-weight: bold;
   }
+}
 
-  ion-text {
-    padding-left: 10px;
-  }
+ion-button {
+  width: 40%;
 }
