@@ -4,6 +4,7 @@
     <ion-list>
       <ion-item>
         <ion-input
+          [(ngModel)]="email"
           type="email"
           fill="solid"
           label="Email"
@@ -17,6 +18,7 @@
 
       <ion-item>
         <ion-input
+          [(ngModel)]="password"
           type="password"
           fill="solid"
           label="Senha"
@@ -24,11 +26,11 @@
           helperText="Insira sua senha"
           errorText="Senha inválida!"
           ngModel
-          email
+          password
         ></ion-input>
       </ion-item>
       <ion-item>
-        <ion-button>Entrar</ion-button>
+        <ion-button (click)="Login()">Entrar</ion-button>
       </ion-item>
       <ion-item>
         <ion-button (click)="IrParaRegistrar()">Criar Conta</ion-button>
