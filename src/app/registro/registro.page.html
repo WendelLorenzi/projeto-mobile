@@ -27,11 +27,38 @@
           email
         ></ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-button>Entrar</ion-button>
+        <ion-input
+          type="password"
+          fill="solid"
+          label="Confirmar Senha"
+          labelPlacement="floating"
+          helperText="Confirme sua senha"
+          errorText="Senhas diferentes!"
+          ngModel
+          email
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          type="text"
+          fill="solid"
+          label="Nome"
+          labelPlacement="floating"
+          helperText="Insira seu nome completo"
+          errorText=""
+          ngModel
+          email
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button>Criar Conta</ion-button>
       </ion-item>
       <ion-item>
-        <ion-button (click)="IrParaRegistrar()">Criar Conta</ion-button>
+        <ion-button (click)="IrparaLogin()">Fazer login</ion-button>
       </ion-item>
     </ion-list>
   </div>
