@@ -1,13 +1,48 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>event-form</ion-title>
+    <ion-buttons>
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">event-form</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+ <ion-content>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+   <ion-card>
+     <ion-card-header> Cadastrar Evento </ion-card-header>
+     <ion-item>
+       <ion-label>Titulo:</ion-label>
+       <ion-input formControlName="titulo"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Subtítulo:</ion-label>
+       <ion-input formControlName="subtitulo"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Data:</ion-label>
+       <ion-input formControlName="data"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Local:</ion-label>
+       <ion-input formControlName="local"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Endereço:</ion-label>
+       <ion-input formControlName="endereco"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Horario de inicio:</ion-label>
+       <ion-input formControlName="inicio"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Valor:</ion-label>
+       <ion-input formControlName="valor"></ion-input>
+     </ion-item>
+     <ion-item>
+       <ion-label>Descrição:</ion-label>
+       <ion-input formControlName="descricao"></ion-input>
+     </ion-item>
+   </ion-card>
+   <ion-button type="submit">Cadastrar</ion-button>
+  </form>
+ </ion-content>
