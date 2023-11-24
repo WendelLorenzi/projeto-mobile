@@ -13,8 +13,7 @@ export class FolderPage implements OnInit {
   constructor(private router: Router) {}
 
   onCardClick(event: any) {
-    // this.router.navigate(['/folder/Eventos/event-register'], { state: { event: event } });
-    this.router.navigate(['/folder/Eventos/event-form']);
+    this.router.navigate(['/folder/Eventos/event-register'], { state: { event: event } });
    }
 
   ngOnInit() {
@@ -61,6 +60,5 @@ export class FolderPage implements OnInit {
         valor: 'Grátis'
       }
     ];
-    // this.router.navigate(['/folder/Eventos/event-register'], { state: { event: event } });
   }
 }

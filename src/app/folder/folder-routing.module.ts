@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'event-register',
     loadChildren: () => import('./event-register/event-register.module').then( m => m.EventRegisterPageModule)
+  },
+  {
+    path: 'my-events',
+    loadChildren: () => import('./my-events/my-events.module').then( m => m.MyEventsPageModule)
   }
 
 ];
