@@ -7,7 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./event-register.page.scss'],
 })
 export class EventRegisterPage implements OnInit {
-
   event: {
     titulo: string;
     subtitulo: string;
@@ -25,21 +24,24 @@ export class EventRegisterPage implements OnInit {
     local: '',
     endereco: '',
     inicio: '',
-    valor: ''
+    valor: '',
   };
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     const navigation = this.router.getCurrentNavigation();
-    const state = navigation!.extras.state as {event: any};
+    const state = navigation!.extras.state as { event: any };
     if (state) {
       this.event = state.event;
     }
-   }
+  }
 
   goBack() {
     this.router.navigate(['/folder/Eventos']);
   }
 
+  IrParaQrCode() {
+    this.router.navigate(['/folder/read-qrcode']);
+  }
 }

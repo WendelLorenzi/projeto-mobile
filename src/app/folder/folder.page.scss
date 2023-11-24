@@ -7,8 +7,7 @@ ion-menu-button {
   position: relative;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 1rem;
 }
 
 #container strong {
@@ -36,4 +35,3 @@ ion-list {
 #header1 {
   margin-bottom: 150px;
 }
-

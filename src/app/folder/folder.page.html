@@ -13,7 +13,6 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
     <ion-list>
       <ion-card *ngFor="let event of eventsList" (click)="onCardClick(event)">
         <ion-card-header>
@@ -22,13 +21,11 @@
         </ion-card-header>
 
         <ion-card-content>
-          <p> {{ event.data }} </p>
-          <p> {{ event.local }} </p>
+          <p>{{ event.data }}</p>
+          <p>{{ event.local }}</p>
         </ion-card-content>
 
-        <ion-card-content>
-          {{ event.descricao }}
-        </ion-card-content>
+        <ion-card-content> {{ event.descricao }} </ion-card-content>
       </ion-card>
     </ion-list>
   </div>

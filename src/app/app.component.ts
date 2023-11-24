@@ -10,7 +10,7 @@ export class AppComponent {
     { title: 'Cadastrar Eventos', url: '/folder/Eventos/event-form' },
     { title: 'Meus Eventos', url: '/folder/Eventos/my-events' },
     { title: 'Ler QrCode', url: '/folder/read-qrcode' },
-    { title: 'Sair', url: '/folder/exit' },
+    { title: 'Sair', url: '/' },
   ];
   constructor() {}
 }

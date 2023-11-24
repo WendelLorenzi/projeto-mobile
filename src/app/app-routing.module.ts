@@ -25,10 +25,10 @@ const routes: Routes = [
   {
     path: 'exit',
     loadChildren: () =>
-      import('./exit/exit.module').then((m) => m.ExitPageModule),
+      import('./folder/exit/exit.module').then((m) => m.ExitPageModule),
   },
   {
-    path: 'read-qrcode',
+    path: 'folder/read-qrcode',
     loadChildren: () =>
       import('./read-qrcode/read-qrcode.module').then(
         (m) => m.ReadQrcodePageModule

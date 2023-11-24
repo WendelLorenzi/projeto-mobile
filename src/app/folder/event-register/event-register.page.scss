@@ -1,11 +1,17 @@
 ion-card {
   margin: 20px;
-  margin-top: 100px;
+  margin-top: 1.5rem;
 }
 
 ion-card-header {
   text-align: center;
   font-weight: bold;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 ion-item {
@@ -19,4 +25,8 @@ ion-item {
   ion-text {
     padding-left: 10px;
   }
+}
+
+ion-button {
+  width: 40%;
 }
