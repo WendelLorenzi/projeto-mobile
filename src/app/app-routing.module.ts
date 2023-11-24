@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Eventos',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -32,6 +32,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./read-qrcode/read-qrcode.module').then(
         (m) => m.ReadQrcodePageModule
+      ),
+  },
+  {
+    path: 'event-form',
+    loadChildren: () =>
+      import('./folder/event-form/event-form.module').then(
+        (m) => m.EventFormPageModule
       ),
   },
 ];
