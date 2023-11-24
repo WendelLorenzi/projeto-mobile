@@ -26,7 +26,7 @@ export class MyEventsPage implements OnInit {
         endereco: 'Rua Piaui, 815',
         inicio: '19:00',
         valor: 'Grátis',
-        qrcode: 'https://github.com/WendelLorenzi/projeto-SD/assets/38894557/0fa17c38-2479-4c40-a342-559b90e5a098'
+        qrcode: 'teste-qrcode1'
       },
       {
         titulo: 'Evento 2',
